@@ -12,6 +12,13 @@ This project provides a comprehensive setup for Python development, including a 
 
 Refer to the documentation for usage instructions and further details.
 
+### Codespaces
+
+Just start it by clicking this badge:
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patdhlk/eac-repo/)
+
+
 ## Engineering-as-Code
 
 - For architecture modelling `plantuml` and `mermaid` are supported. 
