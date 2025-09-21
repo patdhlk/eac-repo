@@ -24,7 +24,7 @@
             "extensions": [
                 "useblocks.ubcode",
                 "ms-python.python",
-                "tamasfe.even-better-toml",
+                "tamasfe.even-better-toml"
             ]
         },
         "settings": {
