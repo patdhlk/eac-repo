@@ -1,0 +1,36 @@
+[project]
+name = "EAC-REPO"
+version = "0.1.0"
+description = "Engineering-as-code Repo Template"
+authors = [
+    { name = "EAC-REPO AUTHOR", email = "info@example.com" }
+]
+dependencies = [
+    "sphinx[test]>=8.2.3",
+    "sphinx-needs[plotting]>=5.1.0",
+    "sphinxcontrib-plantuml>=0.30",
+    "sphinx_codelinks>=1.0.0",
+    "sphinx-design>=0.6.1",
+    "sphinx-simplepdf>=1.6.0",
+    "furo>=2024.8.6",
+    "sphinxcontrib-mermaid>=1.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.rye.scripts]
+docs = "sphinx-build -a -E -b html docs docs/_build/html"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["eac"]

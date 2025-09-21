@@ -1,0 +1,38 @@
+[codelinks]
+# Configuration for source tracing
+set_local_url = true            # Set to true to enable local code html and URL generation
+local_url_field = "local-url"   # Need's field name for local URL
+set_remote_url = true           # Set to true to enable remote url to be generated
+remote_url_field = "remote-url" # Need's field name for remote URL
+
+# Configuration for source tracing project "EAC-REPO"
+[codelinks.projects.eac-repo]
+remote_url_pattern = "https://github.com/patdhlk/EAC-REPO/blob/{commit}/{path}#L{line}" # URL pattern for remote source code
+
+[codelinks.projects.eac-repo.source_discover]
+src_dir = "../src" # Relative path from this TOML config to the source directory
+include = [
+    "*.cpp",
+    "*.h"
+]
+exclude=[]
+gitignore = true
+comment_type = "cpp"
+
+[codelinks.projects.eac-repo.analyse]
+get_need_id_refs = false
+get_oneline_needs = true
+
+[codelinks.projects.eac-repo.analyse.oneline_comment_style]
+# Configuration for oneline comment style
+start_sequence = "@"
+end_sequence = "\n"  # Platform-specific line ending
+field_split_char = ","
+# Fields that are defined in the oneline comment style
+# needs_fields = [
+#   { "name" = "id", "type" = "str" },
+#   { "name" = "title", "type" = "str" },
+#   { "name" = "type", "type" = "str", "default" = "impl" },
+#   { "name" = "links", "type" = "list[str]", "default" = [
+#   ] },
+# ]
